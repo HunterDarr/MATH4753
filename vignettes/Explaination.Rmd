@@ -1,0 +1,49 @@
+---
+title: "This package has been used in my statistics class"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{This package has been used in my statistics class}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r setup}
+library(FALL224753darr0006)
+```
+
+# Introduction
+
+# Testing my package functions
+
+## 1
+
+```{r}
+sam=round(rnorm(20,mean=10,sd=4),2)
+noOutPut = FALL224753darr0006::myboot2(x=sam,fun="median", xName = "median")
+```
+
+## 2
+
+```{r}
+FALL224753darr0006::mycltu(n=54,iter=100000)
+```
+
+## 3
+
+```{r}
+logbin2=function(x,param) log(dbinom(x,prob=param,size=20)) #With size set to 20 for 20 trials each
+FALL224753darr0006::mymaxlik(x=c(3,3,4,3,4,5,5,4),param=seq(0,1,length=1000),lfun=logbin2)
+```
+
+## 4
+
+```{r}
+FALL224753darr0006::ntickets(N=400,gamma = 0.02, p = 0.95)
+```
