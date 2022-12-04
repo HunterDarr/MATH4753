@@ -20,34 +20,58 @@ library(FALL224753darr0006)
 
 # Introduction
 
+This is that package that I used throughout MATH 4753. This package contains .R functions that were used throughout the course. It also contains some data that was used as well.
+
+Here is the link to my github repository:
+https://github.com/HunterDarr/MATH4753
+
 # Testing my package functions
 
-## 1
+## 1 myboot2
 
 ```{r}
 sam=round(rnorm(20,mean=10,sd=4),2)
 noOutPut = FALL224753darr0006::myboot2(x=sam,fun="median", xName = "median")
 ```
 
-## 2
+The myboot2 function was used in lab 9. The function is used to make point and interval estimates along with an output as a list. 
+
+## 2 mycltu
 
 ```{r}
 FALL224753darr0006::mycltu(n=54,iter=100000)
 ```
 
-## 3
+The mycltu function was used in lab 8. It is used to represent the central limit theorem.
+
+## 3 mymaxlik
 
 ```{r}
 logbin2=function(x,param) log(dbinom(x,prob=param,size=20)) #With size set to 20 for 20 trials each
 FALL224753darr0006::mymaxlik(x=c(3,3,4,3,4,5,5,4),param=seq(0,1,length=1000),lfun=logbin2)
 ```
 
-## 4
+The mymaxlik function was used in lab 10. Its purpose is to make maximum likelihood estimates.
+
+## 4 ntickets
 
 ```{r}
 FALL224753darr0006::ntickets(N=400,gamma = 0.02, p = 0.95)
 ```
 
+The ntickets function is my implementation of project1 in this course. Its purpose is to estimate the number of tickets to be sold on a flight for booking. Airlines want to oversell flights because passengers often do not show up. This allows them to find the number of tickets to sell to have a full plane while keeping the probability of having too many passengers for the flight low.
+
+## Other
+
+There are more functions contained in this package under the R folder.
+
+# My packaged data working
+
+```{r}
+head(FALL224753darr0006::fire)
+```
+
+The data I have packed is the fire data. You can see the head() of it above.
 
 # devtools::check() output
 
