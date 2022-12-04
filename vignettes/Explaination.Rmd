@@ -47,3 +47,13 @@ FALL224753darr0006::mymaxlik(x=c(3,3,4,3,4,5,5,4),param=seq(0,1,length=1000),lfu
 ```{r}
 FALL224753darr0006::ntickets(N=400,gamma = 0.02, p = 0.95)
 ```
+
+
+# devtools::check() output
+
+── R CMD check results ─────────── FALL224753darr0006 0.1.0 ────
+Duration: 14.2s
+
+0 errors ✔ | 0 warnings ✔ | 0 notes ✔
+
+R CMD check succeeded
